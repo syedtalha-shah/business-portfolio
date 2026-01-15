@@ -29,7 +29,7 @@ const HeroSection = () => {
       <InteractiveCursor />
       <ParticleBackground particleCount={200} />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 py-20 sm:py-0">
         <motion.div
           className="text-center max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -38,20 +38,20 @@ const HeroSection = () => {
         >
           {/* Main Heading */}
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Welcome to{' '}
-            <span className="text-primary-600 dark:text-primary-400">
+            <span className="text-primary-600 dark:text-primary-400 block sm:inline">
               {companyInfo.name}
             </span>
           </motion.h1>
 
           {/* Typewriter Effect */}
           <motion.div
-            className="text-2xl md:text-4xl font-semibold mb-8 text-gray-700 dark:text-gray-300 min-h-[3rem] md:min-h-[4rem]"
+            className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 sm:mb-8 text-gray-700 dark:text-gray-300 min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[4rem] px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <motion.p
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -76,7 +76,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -85,7 +85,7 @@ const HeroSection = () => {
               variant="primary"
               size="lg"
               onClick={() => handleCTAClick('#projects')}
-              className="group"
+              className="group w-full sm:w-auto"
             >
               View Our Work
               <ArrowRight className="ml-2 inline-block group-hover:translate-x-1 transition-transform" size={20} />
@@ -94,6 +94,7 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               onClick={() => handleCTAClick('#contact')}
+              className="w-full sm:w-auto"
             >
               Get In Touch
             </Button>
@@ -101,7 +102,7 @@ const HeroSection = () => {
 
           {/* Scroll Indicator */}
           <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -117,8 +118,8 @@ const HeroSection = () => {
                 ease: 'easeInOut'
               }}
             >
-              <span className="text-sm mb-2">Scroll</span>
-              <ChevronDown size={24} />
+              <span className="text-xs sm:text-sm mb-1 sm:mb-2">Scroll</span>
+              <ChevronDown size={20} className="sm:w-6 sm:h-6" />
             </motion.button>
           </motion.div>
         </motion.div>

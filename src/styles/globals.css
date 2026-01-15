@@ -108,12 +108,24 @@ body {
 
 @media (min-width: 640px) {
   .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
     padding: 0 2rem;
   }
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 3rem 0;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 4rem 0;
+  }
 }
 
 @media (min-width: 768px) {
